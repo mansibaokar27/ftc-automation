@@ -11,6 +11,9 @@ When I click on Manage Projects tab
 Then I navigate to Manage Projects page
 When I click on Add Project button
 Then I navigate to Manage project page
+When I enter create project details
+And  I click on save button
+Then I should be able to create the project
 
 
 

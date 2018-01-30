@@ -85,6 +85,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="Features\AddProject.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AddProject.feature</DependentUpon>
+    </Compile>
     <Compile Include="Features\RecruiterOnboarding.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -96,13 +101,19 @@
       <DependentUpon>TalentOnBoarding.feature</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Steps\AddProjectSteps.cs" />
     <Compile Include="Steps\RecruiterOnboardingSteps.cs" />
+    <Compile Include="Steps\TalentOnboardingSteps.cs" />
     <Compile Include="Utils\Start.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="Default.srprofile">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Features\AddProject.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>AddProject.feature.cs</LastGenOutput>
     </None>
     <None Include="Features\RecruiterOnboarding.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>

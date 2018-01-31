@@ -4,6 +4,8 @@ using TechTalk.SpecFlow;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using FTC.Framework.Utils;
+
 using System.Threading.Tasks;
 
 namespace FTC.Test.Steps
@@ -13,7 +15,7 @@ namespace FTC.Test.Steps
         [When(@"I click on Edit profile button")]
         public void WhenIClickOnEditProfileButton()
         {
-            ScenarioContext.Current.Pending();
+            Objects.poDashboard.clickonEditProfile();
         }
 
         [Then(@"I successfully navigate to personal details page")]

@@ -41,9 +41,14 @@ namespace FTC.Framework.Utils
 
             try
             {
-                //  string rootPath = Environment.CurrentDirectory;
+                string rootPath = AppDomain.CurrentDomain.BaseDirectory;
 
-                string rootPath = @"D:\workspace\FTC\FTC\FTC.Framework\bin\Debug";
+                //string rootPath = Environment.CurrentDirectory;
+
+                //string rootPath = @"D:\workspace\FTC\FTC\FTC.Framework\bin\Debug";
+
+
+                //System.Environment.SetEnvironmentVariable(driverName, driverPath);
 
                 if (Convert.ToBoolean(browser.SelectBrowser(BrowserCollection.firefox.ToString(), "Browser.xml")) == true)
                 {
@@ -62,12 +67,19 @@ namespace FTC.Framework.Utils
                 }
                 else if (Convert.ToBoolean(browser.SelectBrowser(BrowserCollection.chrome.ToString(), "Browser.xml")) == true)
                 {
-                    driverPath = rootPath+"\\Library\\";
+                  
+
                     driverName = "webdriver.chrome.driver";
 
+                  //  driverPath = rootPath + "\\chromedriver.exe";
+
+                    System.Environment.SetEnvironmentVariable(driverName, driverPath);
+                   // driverPath = rootPath+"\\Library\\";
+                   // driverName = "webdriver.chrome.driver";
+
                     ChromeOptions options = new ChromeOptions();
-                    options.AddArgument("--disable-extensions");
-                    driver = new ChromeDriver(driverPath, options);
+                    //options.AddArgument("--disable-extensions");
+                    driver = new ChromeDriver(rootPath, options);
 
                     Current.BrowserName = BrowserCollection.chrome.ToString();
 

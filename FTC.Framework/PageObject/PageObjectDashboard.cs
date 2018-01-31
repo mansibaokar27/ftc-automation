@@ -25,6 +25,7 @@ namespace FTC.Framework.PageObject
 
         By profile = By.CssSelector("button.border-none.mat-button");
 
+        By editProfile = By.CssSelector("span[class='marginR-15 cursor-pointer'][title='Edit Profile']");
         #endregion
         public void selectProfile()
         {
@@ -37,9 +38,16 @@ namespace FTC.Framework.PageObject
 
            // driver.SwitchTo().DefaultContent();
         }
+
         public void verifylogin()
         {
             Assert.AreEqual( true, driver.FindElement(By.LinkText("Dashboard")).Enabled);
         }
+
+        public void clickonEditProfile()
+        {
+            driver.FindElement(editProfile).Click();
+        }
+
     }
 }

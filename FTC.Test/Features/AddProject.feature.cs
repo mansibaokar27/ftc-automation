@@ -61,10 +61,10 @@ namespace FTC.Test.Features
             testRunner.CollectScenarioErrors();
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("Adding project by admin", SourceLine=2)]
-        public virtual void AddingProjectByAdmin()
+        [TechTalk.SpecRun.ScenarioAttribute("Adding new project by admin", SourceLine=2)]
+        public virtual void AddingNewProjectByAdmin()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Adding project by admin", ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Adding new project by admin", ((string[])(null)));
 #line 3
 this.ScenarioSetup(scenarioInfo);
 #line hidden
@@ -91,6 +91,12 @@ testRunner.Then("I navigate to Manage Projects page", ((string)(null)), ((TechTa
 testRunner.When("I click on Add Project button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 13
 testRunner.Then("I navigate to Manage project page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 14
+testRunner.When("I enter create project details", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 15
+testRunner.And("I click on save button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 16
+testRunner.Then("I should be able to create the project", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace FTC.Test.Steps
 {
+    [Binding]
     public class AddProjectSteps
     {
         [When(@"I navigate to admin dashboard")]
@@ -36,6 +37,16 @@ namespace FTC.Test.Steps
 
         [Then(@"I navigate to Manage project page")]
         public void ThenINavigateToManageProjectPage()
+        {
+            ScenarioContext.Current.Pending();
+        }
+        [When(@"I enter create project details")]
+        public void WhenIEnterCreateProjectDetails()
+        {
+            ScenarioContext.Current.Pending();
+        }
+        [Then(@"I should be able to create the project")]
+        public void ThenIShouldBeAbleToCreateTheProject()
         {
             ScenarioContext.Current.Pending();
         }

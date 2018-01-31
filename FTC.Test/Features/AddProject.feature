@@ -1,6 +1,6 @@
 ﻿Feature: AddProject
 	
-Scenario: Adding project by admin
+Scenario: Adding new project by admin
 When I perfom log in operation
 | Field     | Value             |
 | User Name | ftc@fthecouch.com |
